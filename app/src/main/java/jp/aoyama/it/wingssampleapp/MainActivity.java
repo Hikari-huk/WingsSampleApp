@@ -51,12 +51,16 @@ public class MainActivity extends AppCompatActivity {
     private class ListItemClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            // タップされた定食名を取得。
-            String item = (String) parent.getItemAtPosition(position);
-            // トーストで表示する文字列を生成。
-            String show = "あなたが選んだ定食: " + item;
-            // トーストの表示。
-            Toast.makeText(MainActivity.this, show, Toast.LENGTH_LONG).show();
+//            // タップされた定食名を取得。
+//            String item = (String) parent.getItemAtPosition(position);
+//            // トーストで表示する文字列を生成。
+//            String show = "あなたが選んだ定食: " + item;
+//            // トーストの表示。
+//            Toast.makeText(MainActivity.this, show, Toast.LENGTH_LONG).show();
+            // 注文確認ダイアログフラグメントオブジェクトを生成。
+            OrderConfirmDialogFragment dialogFragment = new OrderConfirmDialogFragment();
+            // ダイアログ表示。
+            dialogFragment.show(getSupportFragmentManager(), "OrderConfirmDialogFragment");
         }
     }
 
