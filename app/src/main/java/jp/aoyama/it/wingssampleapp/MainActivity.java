@@ -18,32 +18,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // ListViewオブジェクトを取得。
-        ListView lvMenu = findViewById(R.id.lvMenu);
-        // リストビューに表示するリストデータ用Listオブジェクトを作成。
-        List<String> menuList = new ArrayList<>();
-        // リストデータの登録。
-        menuList.add("から揚げ定食");
-        menuList.add("ハンバーグ定食");
-        menuList.add("生姜焼き定食");
-        menuList.add("ステーキ定食");
-        menuList.add("野菜炒め定食");
-        menuList.add("とんかつ定食");
-        menuList.add("ミンチかつ定食");
-        menuList.add("チキンカツ定食");
-        menuList.add("コロッケ定食");
-        menuList.add("回鍋肉定食");
-        menuList.add("麻婆豆腐定食");
-        menuList.add("青椒肉絲定食");
-        menuList.add("焼き魚定食");
-        menuList.add("焼肉定食");
-        // アダプタオブジェクトを生成。
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, menuList);
-        // リストビューにアダプタオブジェクトを設定。
-        lvMenu.setAdapter(adapter);
-        // リストビューにリスナを設定。
-        lvMenu.setOnItemClickListener(new ListItemClickListener());
-    }
 
     /**
      * リストがタップされたときの処理が記述されたメンバクラス。
@@ -62,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
             // ダイアログ表示。
             dialogFragment.show(getSupportFragmentManager(), "OrderConfirmDialogFragment");
         }
+
+        System.out.println("5章");
+        System.out.println("7章");
+
     }
 
 }
