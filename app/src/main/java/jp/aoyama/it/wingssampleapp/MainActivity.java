@@ -14,12 +14,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ListView lvMenu = findViewById(R.id.lvMenu);
         List<Map<String,String>> menuList = new ArrayList<>();
         Map<String,String> menu = new HashMap<>();
@@ -128,4 +130,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
 }
+
