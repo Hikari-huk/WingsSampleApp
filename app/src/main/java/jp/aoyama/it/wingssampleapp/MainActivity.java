@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         ListView lvCocktail = findViewById(R.id.lvCocktail);
         lvCocktail.setOnItemClickListener(new ListItemClickListener());
@@ -48,5 +51,8 @@ public class MainActivity extends AppCompatActivity {
             Button btnSave = findViewById(R.id.btnSave);
             btnSave.setEnabled(true);
         }
+
     }
+
 }
+
