@@ -19,8 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        System.out.println("10sec");
         System.out.println("5章");
         System.out.println("7章");
+
     }
 
 }
