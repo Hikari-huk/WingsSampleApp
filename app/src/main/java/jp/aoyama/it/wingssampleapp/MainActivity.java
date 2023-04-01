@@ -19,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         System.out.println("12sec");
+
 
         _player = new MediaPlayer();
         String mediaFileUriStr = "android.resource://" + getPackageName() + "/" + R.raw.spring_mountain;

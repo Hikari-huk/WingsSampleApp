@@ -5,4 +5,5 @@
     <string name="bt_back">&lt;&lt;</string>
     <string name="bt_forward">&gt;&gt;</string>
     <string name="sw_loop">リピート再生</string>
+
 </resources>
