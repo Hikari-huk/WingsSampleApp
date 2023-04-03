@@ -1,11 +1,8 @@
 <resources>
-    <string name="app_name">リスト選択サンプル2</string>
-    <string name="dialog_title">注文確認</string>
-    <string name="dialog_msg">選択された定食を注文します。よろしいですか。</string>
-    <string name="dialog_btn_ok">注文</string>
-    <string name="dialog_btn_ng">キャンセル</string>
-    <string name="dialog_btn_nu">問合せ</string>
-    <string name="dialog_ok_toast">ご注文ありがとうございます。</string>
-    <string name="dialog_ng_toast">ご注文をキャンセルしました。</string>
-    <string name="dialog_nu_toast">お問い合わせ内容をおしらせください。</string>
+    <string name="app_name">暗黙的インテントサンプル</string>
+    <string name="bt_map_search">地図検索</string>
+    <string name="tv_current_title">現在地</string>
+    <string name="tv_latitude_title">緯度:</string>
+    <string name="tv_longitude_title">経度:</string>
+    <string name="bt_map_current">地図表示</string>
 </resources>
