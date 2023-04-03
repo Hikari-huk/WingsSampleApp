@@ -3,6 +3,7 @@ package jp.aoyama.it.wingssampleapp;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -71,6 +72,24 @@ public class SoundManageService extends Service {
         @Override
         public void onPrepared(MediaPlayer mp) {
             mp.start();
+
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(SoundManageService.this, CHANNEL_ID);
+
+            builder.setSmallIcon(android.R.drawable.ic_dialog_info);
+            builder.setContentTitle(getString(R.string.msg_notification_title_start));
+            builder.setContentText(getString(R.string.msg_notification_text_start));
+
+            Intent intent = new Intent(SoundManageService.this, MainActivity.class);
+            intent.putExtra("fromNotification", true);
+
+            PendingIntent stopServiceIntent = PendingIntent.getActivity(
+                    SoundManageService.this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+
+            builder.setContentIntent(stopServiceIntent);
+            builder.setAutoCancel(true);
+            Notification notification = builder.build();
+
+            startForeground(200, notification);
         }
     }
 

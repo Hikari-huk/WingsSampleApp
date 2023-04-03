@@ -21,6 +21,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = getIntent();
+
+        boolean fromNotification = intent.getBooleanExtra("fromNotification", false);
+
+        if(fromNotification){
+            Button btPlay = findViewById(R.id.btPlay);
+            Button btStop = findViewById(R.id.btStop);
+
+            btPlay.setEnabled(false);
+            btStop.setEnabled(true);
+        }
 
     }
 
