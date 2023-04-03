@@ -18,15 +18,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         System.out.println("14sec");
-
         System.out.println("13sec");
         System.out.println("12sec");
-        System.out.println("11章");
+        System.out.println("11sec");
         System.out.println("10sec");
-        System.out.println("5章");
-        System.out.println("7章");
+        System.out.println("5sec");
+        System.out.println("7sec");
 
     }
 
