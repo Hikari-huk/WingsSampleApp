@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -12,14 +13,25 @@ import android.widget.EditText;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         System.out.println("14sec");
+
+        System.out.println("13sec");
+        System.out.println("12sec");
+        System.out.println("11章");
+        System.out.println("10sec");
+        System.out.println("5章");
+        System.out.println("7章");
+
     }
+
 
     public void onMapSearchButtonClick(View view){
         EditText etSearchWord = findViewById(R.id.etSearchWord);
