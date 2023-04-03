@@ -14,6 +14,9 @@ import java.net.URLEncoder;
 
 public class MainActivity extends AppCompatActivity {
 
+    private double _latitude = 0;
+    private double _longitude = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,5 +41,12 @@ public class MainActivity extends AppCompatActivity {
         } catch (UnsupportedEncodingException e) {
             Log.e("MainActivity", "検索キーワード変換失敗", e);
         }
+    }
+
+    public void onMapShowCurrentButtonClick(View view){
+        String uriStr = "geo:" + _latitude + "," + _longitude;
+        Uri uri = Uri.parse(uriStr);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 }
