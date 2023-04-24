@@ -1,16 +1,11 @@
 package jp.aoyama.it.wingssampleapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,13 +13,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("14sec");
-        System.out.println("13sec");
-        System.out.println("12sec");
-        System.out.println("11sec");
-        System.out.println("10sec");
-        System.out.println("5sec");
-        System.out.println("7sec");
+
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        toolbar.setLogo(R.mipmap.ic_launcher);
+
+        toolbar.setTitle(R.string.toolbar_title);
+
+        toolbar.setTitleTextColor(Color.WHITE);
+
+        toolbar.setSubtitle(R.string.toolbar_subtitle);
+
+        toolbar.setSubtitleTextColor(Color.LTGRAY);
+
+        setSupportActionBar(toolbar);
 
     }
 
