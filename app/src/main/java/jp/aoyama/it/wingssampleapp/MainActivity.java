@@ -7,6 +7,8 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -19,15 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar.setLogo(R.mipmap.ic_launcher);
 
-        toolbar.setTitle(R.string.toolbar_title);
-
-        toolbar.setTitleTextColor(Color.WHITE);
-
-        toolbar.setSubtitle(R.string.toolbar_subtitle);
-
-        toolbar.setSubtitleTextColor(Color.LTGRAY);
-
         setSupportActionBar(toolbar);
+
+        CollapsingToolbarLayout toolbarLayout = findViewById(R.id.toolbarLayout);
+
+        toolbarLayout.setTitle(getString(R.string.toolbar_title));
+
+        toolbarLayout.setExpandedTitleColor(Color.WHITE);
+
+        toolbarLayout.setCollapsedTitleTextColor(Color.LTGRAY);
 
     }
 
